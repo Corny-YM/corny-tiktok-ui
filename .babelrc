@@ -1,0 +1,13 @@
+{
+    // ../../ to `urlBase`
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "~": "./src"
+                }
+            }
+        ]
+    ]
+}
