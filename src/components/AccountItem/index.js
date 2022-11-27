@@ -11,7 +11,7 @@ const AccountItem = () => {
         <div className={cx('wrapper')}>
             <img
                 className={cx('avatar')}
-                src="https://scontent.fhan2-2.fna.fbcdn.net/v/t31.18172-8/18423226_1318478271582021_7827753074935535642_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=174925&_nc_ohc=IuiVA0E9mKoAX8BUEGM&tn=9ChhlcaCdpbvDFpu&_nc_ht=scontent.fhan2-2.fna&oh=00_AT-GDIbwgNuFdD771837gyP04TMRJ-Nx9SKqV_sMkNM6dg&oe=63767A5A"
+                src="https://corny-ym.github.io/Corny_MP3/a_imgs/the%20search.jpg"
                 alt="Hoa"
             />
             <div className={cx('info')}>
