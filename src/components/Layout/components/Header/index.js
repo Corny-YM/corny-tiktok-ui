@@ -28,6 +28,34 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                    children: {
+                        title: 'Language',
+                        data: [
+                            {
+                                code: 'en',
+                                title: 'English 1',
+                            },
+                            {
+                                code: 'vi',
+                                title: 'English 2',
+                            },
+                        ],
+                    },
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -48,6 +76,16 @@ function Header() {
             setSearchResult([]);
         }, 0);
     }, []);
+
+    // Handle logic
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                // Do something
+                break;
+            default:
+        }
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -74,7 +112,10 @@ function Header() {
                     )}
                 >
                     <div className={cx('search')}>
-                        <input placeholder="Search accounts and videos" spellCheck={false} />
+                        <input
+                            placeholder="Search accounts and videos"
+                            spellCheck={false}
+                        />
                         <button className={cx('clear')}>
                             <FontAwesomeIcon icon={faCircleXmark} />
                         </button>
@@ -91,7 +132,7 @@ function Header() {
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
