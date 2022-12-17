@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'; // thu vien prop-types cua create-react-app
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
@@ -26,6 +27,10 @@ const AccountItem = ({ data }) => {
             </div>
         </Link>
     );
+};
+
+AccountItem.propTypes = {
+    data: PropTypes.object.isRequired,
 };
 
 export default AccountItem;

@@ -2,6 +2,7 @@
 import axios from 'axios';
 
 // TAO RA 1 INSTANCE - CO CAU HINH LA: request
+// baseURL = https://tiktok.fullstack.edu.vn/api/
 const httpRequest = axios.create({
     // baseURL LA API ENDPOINT DIEM TRUY CAP CUOI
     baseURL: process.env.REACT_APP_BASE_URL,
